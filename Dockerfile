@@ -15,4 +15,4 @@ COPY ./configs/helper.py /usr/src/app/utils
 COPY ./configs/how-to-use.ipynb /usr/src/app/
 COPY ./configs/train.py /usr/src/app/train.py
 
-CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+CMD ["jupyter", "lab", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
