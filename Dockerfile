@@ -1,6 +1,8 @@
 # pull yolov5 image
 FROM ultralytics/yolov5:v4.0
 
+RUN apt-get update && apt-get install -y tmux
+
 # change dir
 WORKDIR /usr/src/app
 
@@ -15,4 +17,4 @@ COPY ./configs/helper.py /usr/src/app/utils
 COPY ./configs/how-to-use.ipynb /usr/src/app/
 COPY ./configs/train.py /usr/src/app/train.py
 
-CMD ["jupyter", "lab", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+CMD ["tmux"]
