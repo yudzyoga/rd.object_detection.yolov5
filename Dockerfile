@@ -13,3 +13,6 @@ COPY ./configs/custom.yaml /usr/src/app/data
 COPY ./configs/yolov5l_custom.yaml /usr/src/app/models
 COPY ./configs/helper.py /usr/src/app/utils
 COPY ./configs/how-to-use.ipynb /usr/src/app/
+COPY ./configs/train.py /usr/src/app/train.py
+
+CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
